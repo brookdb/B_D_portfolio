@@ -1,0 +1,139 @@
+.show--grid--wrapper .tile--wrapper {
+  opacity: 1;
+}
+
+.tile--wrapper {
+  will-change: opacity;
+  position: relative;
+  display: grid;
+  background-color: #9aabfa;
+  height: fit-content;
+  border-radius: 6px;
+}
+.tile--wrapper:hover {
+  cursor: pointer;
+}
+.open {
+  width: calc(95vw - 4px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  background-color: #6b48fa;
+  box-shadow: 0 8px 16px 0 rgba(1, 1, 1, 0.3);
+}
+.open:hover {
+  cursor: auto;
+}
+
+.tile--wrapper:hover .tile--header--txt,
+.tile--wrapper:focus .tile--header--txt {
+  color: #fff;
+}
+.tile--header {
+  position: static;
+  opacity: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+.open .tile--header {
+  width: calc(95% - 24px);
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1vw;
+}
+.tile--header-img {
+  width: auto;
+  height: 133px;
+  opacity: 0.6;
+  align-self: center;
+  background-position: 50% 50%;
+  background-size: cover;
+  flex: none;
+  border-radius: 6px;
+}
+.open .tile--header-img {
+  height: 200px;
+  background-position: 50% 10%;
+  opacity: 0.3;
+}
+.tile--header--txt {
+  align-self: center;
+  font-size: 16px;
+  font-family: "OwnersWide";
+  opacity: 1;
+  margin: 2px 0;
+  position: absolute;
+  color: #fad1fb;
+  mix-blend-mode: hard-light;
+  text-align: center;
+}
+.open .tile--header .tile--header--txt {
+  font-size: 7vw;
+  color: white;
+}
+.tile--header--back {
+  position: absolute;
+  opacity: 0;
+  transform: translate(80vw, -11vh);
+}
+.open .tile--header--back {
+  opacity: 1;
+}
+.image-vertical {
+  aspect-ratio: 2/3;
+}
+.image-horizontal {
+  aspect-ratio: 3/2;
+}
+.image-square {
+  aspect-ratio: 1;
+}
+.button-back {
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem 0;
+  align-self: start;
+  background: none;
+  border: none;
+}
+
+.button-back svg {
+  pointer-events: none;
+  stroke: #fff;
+  stroke-width: 1px;
+  transition: stroke 0.3s;
+}
+
+.button-back:hover svg {
+  stroke: #989898;
+}
+.grid__item--back {
+  z-index: 100;
+}
+
+/* for mobile */
+@media (max-width: 1000px) {
+  .tile--header--txt {
+    font-size: calc(12px + 0.7vw);
+  }
+  .tile--header-img {
+    height: 100px;
+  }
+  .tile--header--back {
+    transform: translate(74vw, -10vh);
+  }
+  .button-back svg {
+    width: 40px;
+  }
+  .open {
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "OwnersWide";
+  src: url("/Fonts/OwnersWide.otf");
+}
+@font-face {
+  font-family: "OwnersWideLight";
+  src: url("/Fonts/OwnersWide-Light.otf");
+}
+@font-face {
+  font-family: "OwnersRegular";
+  src: url("/Fonts/OwnersRegular.otf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background: #fad1fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.App {
+  font-family: "OwnersWide";
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 90vh;
+  padding: 15px;
+  align-items: center;
+}
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 50px;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  height: 60px;
+  background-color: #d2d9fa; /* Background color of the progress bar container */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 20px; /* Spacing from the loading text */
+}
+
+.progress-bar-fill {
+  height: 60px;
+  width: 0;
+  background-color: #6b48fa; /* Color of the progress bar fill */
+  border-radius: 10px; /* Rounded corners */
+  transition: width 0.5s ease-in-out; /* Animation duration and easing */
+}
+
+@media (max-width: 1000px) {
+}
